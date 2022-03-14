@@ -49,7 +49,7 @@ class Config:
     def parse(self, args=None):
         """Parse the configuration"""
         self.conf = self.parser.parse_args(args=args)
-        # self.set_gpu_device()
+        self.set_gpu_device()
         self.clean_file_name()
         self.set_output_directory()
         self.conf.G_structure = [7, 5, 3, 1, 1, 1]
